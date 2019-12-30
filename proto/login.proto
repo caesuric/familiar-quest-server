@@ -1,0 +1,19 @@
+syntax="proto3";
+
+service Login {
+    rpc GetUserToken(UserTokenRequest) returns (UserToken) {}
+    
+    rpc Logout(UserToken) returns (LogoutResult) {}
+}
+
+message UserTokenRequest {
+    string name=1;
+}
+
+message UserToken {
+    string token=1;
+}
+
+message LogoutResult {
+    
+}

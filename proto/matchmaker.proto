@@ -1,0 +1,51 @@
+syntax="proto3";
+
+service MatchMaker {
+    rpc CreateGame(GameCreationRequest) returns (GameCreationResult) {}
+
+    rpc GetActiveGames(GetActiveGamesRequest) returns (GameList) {}
+
+    rpc ConnectToGame(GameConnectionRequest) returns (GameConnectionResult) {}
+
+    rpc DisconnectFromGame(GameDisconnectionRequest) returns (GameDisconnectionResult) {}
+}
+
+message GameCreationRequest {
+    string token=1;
+    string game_name=2;
+}
+
+message GameCreationResult {
+    bool creation_successful=1;
+    GameDescription game_description=2;
+}
+
+message GetActiveGamesRequest {
+
+}
+
+message GameDescription {
+    string game_name=1;
+    string game_id=2;
+}
+
+message GameList {
+    repeated GameDescription games=1;
+}
+
+message GameConnectionRequest {
+    string game_id=1;
+    string user_token=2;
+}
+
+message GameConnectionResult {
+    bool connection_successful=1;
+}
+
+message GameDisconnectionRequest {
+    string user_token=1;
+}
+
+message GameDisconnectionResult {
+    
+}
