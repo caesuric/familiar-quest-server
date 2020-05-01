@@ -88,6 +88,7 @@ def find_game(id):
 class CharacterSync(CharacterSyncServicer):
 
     last_updated_time = 0
+    character_last_updated_times = {}
 
     def UpdateCharacterWorldStates(self, request, context):
         game = find_game(request.game_id)
@@ -102,7 +103,7 @@ class CharacterSync(CharacterSyncServicer):
         game = find_game(request.game_id)
         if not game:
             return CharacterWorldStates()
-        print(game['characters'])
+        # print(game['characters'])
         return CharacterWorldStates(game_id=request.game_id, character_data=game['characters'], update_time=CharacterSync.last_updated_time)
     
     def GetPlayerWorldStates(self, request, context):
@@ -121,7 +122,8 @@ class CharacterSync(CharacterSyncServicer):
             return UpdatePersonalWorldStateResult()
         # print(request)
         for character in game['characters']:
-            if character.id==request.world_state.id:
+            if character.id==request.world_state.id and self.is_newer_personal_update_time(character.id, request.update_time):
+                CharacterSync.character_last_updated_times[character.id] = request.update_time
                 # character.trajectory.x = (request.world_state.location.x - character.location.x) / 10.0
                 # character.trajectory.y = 0
                 # character.trajectory.z = (request.world_state.location.z - character.location.z) / 10.0
@@ -145,6 +147,13 @@ class CharacterSync(CharacterSyncServicer):
                 return UpdateCharacterWorldStateResult()
         game['characters'].append(request.world_state)
         return UpdateCharacterWorldStateResult()
+    
+    def is_newer_personal_update_time(self, id, update_time):
+        if id not in CharacterSync.character_last_updated_times:
+            return True
+        if update_time > CharacterSync.character_last_updated_times[id]:
+            return True
+        return False
 
     def GetPersonalWorldState(self, request, context):
         game = find_game(request.game_id)

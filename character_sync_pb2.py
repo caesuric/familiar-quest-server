@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x14\x63haracter_sync.proto\"j\n\x14\x43haracterWorldStates\x12\x0f\n\x07game_id\x18\x01 \x01(\t\x12,\n\x0e\x63haracter_data\x18\x02 \x03(\x0b\x32\x14.CharacterWorldState\x12\x13\n\x0bupdate_time\x18\x03 \x01(\x01\"\xa0\x02\n\x13\x43haracterWorldState\x12\x11\n\tis_player\x18\x01 \x01(\x08\x12\n\n\x02id\x18\x02 \x01(\t\x12\x1e\n\nmodel_data\x18\x03 \x01(\x0b\x32\n.ModelData\x12(\n\x0f\x61nimation_state\x18\x04 \x01(\x0b\x32\x0f.AnimationState\x12\x1b\n\x08location\x18\x05 \x01(\x0b\x32\t.Location\x12!\n\x0borientation\x18\x06 \x01(\x0b\x32\x0c.Orientation\x12\x1f\n\ntrajectory\x18\x07 \x01(\x0b\x32\x0b.Trajectory\x12+\n\x11health_and_status\x18\x08 \x01(\x0b\x32\x10.HealthAndStatus\x12\x12\n\nis_visible\x18\t \x01(\x08\"v\n\tModelData\x12\x32\n\x11player_appearance\x18\x01 \x01(\x0b\x32\x15.PlayerAppearanceDataH\x00\x12,\n\x0emonster_prefab\x18\x02 \x01(\x0b\x32\x12.MonsterPrefabDataH\x00\x42\x07\n\x05model\"(\n\x14PlayerAppearanceData\x12\x10\n\x08\x66ur_type\x18\x01 \x01(\x05\"(\n\x11MonsterPrefabData\x12\x13\n\x0bprefab_name\x18\x01 \x01(\t\"\x1f\n\x0e\x41nimationState\x12\r\n\x05state\x18\x01 \x01(\t\"+\n\x08Location\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02\x12\t\n\x01z\x18\x03 \x01(\x02\"9\n\x0bOrientation\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02\x12\t\n\x01z\x18\x03 \x01(\x02\x12\t\n\x01w\x18\x04 \x01(\x02\"-\n\nTrajectory\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02\x12\t\n\x01z\x18\x03 \x01(\x02\"<\n\x0fHealthAndStatus\x12\r\n\x05level\x18\x01 \x01(\x05\x12\n\n\x02hp\x18\x02 \x01(\x05\x12\x0e\n\x06max_hp\x18\x03 \x01(\x05\"!\n\x1fUpdateCharacterWorldStateResult\"-\n\x1a\x43haracterWorldStateRequest\x12\x0f\n\x07game_id\x18\x01 \x01(\t\"B\n\x19PersonalWorldStateRequest\x12\x0f\n\x07game_id\x18\x01 \x01(\t\x12\x14\n\x0c\x63haracter_id\x18\x02 \x01(\t\"W\n\x19\x43haracterWorldStateUpdate\x12\x0f\n\x07game_id\x18\x01 \x01(\t\x12)\n\x0bworld_state\x18\x02 \x01(\x0b\x32\x14.CharacterWorldState\" \n\x1eUpdatePersonalWorldStateResult2\xe2\x02\n\rCharacterSync\x12W\n\x1aUpdateCharacterWorldStates\x12\x15.CharacterWorldStates\x1a .UpdateCharacterWorldStateResult\"\x00\x12O\n\x17GetCharacterWorldStates\x12\x1b.CharacterWorldStateRequest\x1a\x15.CharacterWorldStates\"\x00\x12Y\n\x18UpdatePersonalWorldState\x12\x1a.CharacterWorldStateUpdate\x1a\x1f.UpdatePersonalWorldStateResult\"\x00\x12L\n\x14GetPlayerWorldStates\x12\x1b.CharacterWorldStateRequest\x1a\x15.CharacterWorldStates\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x14\x63haracter_sync.proto\"j\n\x14\x43haracterWorldStates\x12\x0f\n\x07game_id\x18\x01 \x01(\t\x12,\n\x0e\x63haracter_data\x18\x02 \x03(\x0b\x32\x14.CharacterWorldState\x12\x13\n\x0bupdate_time\x18\x03 \x01(\x01\"\xa0\x02\n\x13\x43haracterWorldState\x12\x11\n\tis_player\x18\x01 \x01(\x08\x12\n\n\x02id\x18\x02 \x01(\t\x12\x1e\n\nmodel_data\x18\x03 \x01(\x0b\x32\n.ModelData\x12(\n\x0f\x61nimation_state\x18\x04 \x01(\x0b\x32\x0f.AnimationState\x12\x1b\n\x08location\x18\x05 \x01(\x0b\x32\t.Location\x12!\n\x0borientation\x18\x06 \x01(\x0b\x32\x0c.Orientation\x12\x1f\n\ntrajectory\x18\x07 \x01(\x0b\x32\x0b.Trajectory\x12+\n\x11health_and_status\x18\x08 \x01(\x0b\x32\x10.HealthAndStatus\x12\x12\n\nis_visible\x18\t \x01(\x08\"v\n\tModelData\x12\x32\n\x11player_appearance\x18\x01 \x01(\x0b\x32\x15.PlayerAppearanceDataH\x00\x12,\n\x0emonster_prefab\x18\x02 \x01(\x0b\x32\x12.MonsterPrefabDataH\x00\x42\x07\n\x05model\"(\n\x14PlayerAppearanceData\x12\x10\n\x08\x66ur_type\x18\x01 \x01(\x05\"(\n\x11MonsterPrefabData\x12\x13\n\x0bprefab_name\x18\x01 \x01(\t\"\x1f\n\x0e\x41nimationState\x12\r\n\x05state\x18\x01 \x01(\t\"+\n\x08Location\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02\x12\t\n\x01z\x18\x03 \x01(\x02\"9\n\x0bOrientation\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02\x12\t\n\x01z\x18\x03 \x01(\x02\x12\t\n\x01w\x18\x04 \x01(\x02\"-\n\nTrajectory\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02\x12\t\n\x01z\x18\x03 \x01(\x02\"<\n\x0fHealthAndStatus\x12\r\n\x05level\x18\x01 \x01(\x05\x12\n\n\x02hp\x18\x02 \x01(\x05\x12\x0e\n\x06max_hp\x18\x03 \x01(\x05\"!\n\x1fUpdateCharacterWorldStateResult\"-\n\x1a\x43haracterWorldStateRequest\x12\x0f\n\x07game_id\x18\x01 \x01(\t\"B\n\x19PersonalWorldStateRequest\x12\x0f\n\x07game_id\x18\x01 \x01(\t\x12\x14\n\x0c\x63haracter_id\x18\x02 \x01(\t\"l\n\x19\x43haracterWorldStateUpdate\x12\x0f\n\x07game_id\x18\x01 \x01(\t\x12)\n\x0bworld_state\x18\x02 \x01(\x0b\x32\x14.CharacterWorldState\x12\x13\n\x0bupdate_time\x18\x03 \x01(\x01\" \n\x1eUpdatePersonalWorldStateResult2\xe2\x02\n\rCharacterSync\x12W\n\x1aUpdateCharacterWorldStates\x12\x15.CharacterWorldStates\x1a .UpdateCharacterWorldStateResult\"\x00\x12O\n\x17GetCharacterWorldStates\x12\x1b.CharacterWorldStateRequest\x1a\x15.CharacterWorldStates\"\x00\x12Y\n\x18UpdatePersonalWorldState\x12\x1a.CharacterWorldStateUpdate\x1a\x1f.UpdatePersonalWorldStateResult\"\x00\x12L\n\x14GetPlayerWorldStates\x12\x1b.CharacterWorldStateRequest\x1a\x15.CharacterWorldStates\"\x00\x62\x06proto3')
 )
 
 
@@ -593,6 +593,13 @@ _CHARACTERWORLDSTATEUPDATE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='update_time', full_name='CharacterWorldStateUpdate.update_time', index=2,
+      number=3, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -606,7 +613,7 @@ _CHARACTERWORLDSTATEUPDATE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1023,
-  serialized_end=1110,
+  serialized_end=1131,
 )
 
 
@@ -629,8 +636,8 @@ _UPDATEPERSONALWORLDSTATERESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1112,
-  serialized_end=1144,
+  serialized_start=1133,
+  serialized_end=1165,
 )
 
 _CHARACTERWORLDSTATES.fields_by_name['character_data'].message_type = _CHARACTERWORLDSTATE
@@ -779,8 +786,8 @@ _CHARACTERSYNC = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1147,
-  serialized_end=1501,
+  serialized_start=1168,
+  serialized_end=1522,
   methods=[
   _descriptor.MethodDescriptor(
     name='UpdateCharacterWorldStates',

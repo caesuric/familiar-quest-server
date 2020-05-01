@@ -88,6 +88,7 @@ message PersonalWorldStateRequest {
 message CharacterWorldStateUpdate {
     string game_id=1;
     CharacterWorldState world_state=2;
+    double update_time=3;
 }
 
 message UpdatePersonalWorldStateResult {
