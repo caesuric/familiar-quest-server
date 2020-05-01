@@ -122,9 +122,9 @@ class CharacterSync(CharacterSyncServicer):
         # print(request)
         for character in game['characters']:
             if character.id==request.world_state.id:
-                # character.trajectory.x = (request.world_state.location.x - character.location.x) / 4.0
+                # character.trajectory.x = (request.world_state.location.x - character.location.x) / 10.0
                 # character.trajectory.y = 0
-                # character.trajectory.z = (request.world_state.location.z - character.location.z) / 4.0
+                # character.trajectory.z = (request.world_state.location.z - character.location.z) / 10.0
                 # print(old_item.trajectory)
                 character.location.x = request.world_state.location.x
                 character.location.y = request.world_state.location.y
